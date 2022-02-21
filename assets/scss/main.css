@@ -1,12 +1,16 @@
 @media screen and (max-width: 64rem) {
   body {
-    font-size: 3rem !important;
+    font-size: 1.25rem !important;
   }
 
+  header {
+    height: 2rem !important;
+    font-size: 1.25rem;
+  }
   header:after {
     content: " ";
     position: absolute;
-    top: 105px !important;
+    top: 1.25rem !important;
     height: 50px !important;
     left: 0;
     width: 100%;
@@ -15,7 +19,8 @@
   }
 
   main {
-    height: calc(100% - 105px);
+    height: calc(100vh - 3rem);
+    margin-top: 3rem;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -50,23 +55,24 @@ body.animal-changing main {
 
 header {
   width: 100%;
-  height: 160px;
+  height: 100px;
   display: flex;
   position: relative;
 }
 header:after {
   content: " ";
   position: absolute;
-  top: 75px;
+  top: 55px;
   height: 150px;
   left: 0;
   width: 100%;
   background-image: url("/assets/images/interface/header-2.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 header .title {
   margin: auto;
-  font-size: 92px;
+  font-size: 90%;
 }
 
 main {
@@ -74,7 +80,7 @@ main {
   width: calc(100vw - 10%);
   padding: 0 5%;
   display: flex;
-  --transition-duration: 500ms;
+  --transition-duration: 350ms;
   -webkit-transition: opacity var(--transition-duration) ease-in-out;
   -moz-transition: opacity var(--transition-duration) ease-in-out;
   -o-transition: opacity var(--transition-duration) s ease-in-out;

@@ -5,6 +5,7 @@
     <!-- HTML Meta Tags -->
     <title>My little zoo</title>
     <meta name="description" content="Faire découvrir les animaux et leurs cris aux petits et aux plus grands.">
+    <meta name="viewport" content="width=device-width">
     <!-- Manifest -->
     <link rel="manifest" href="manifest.json">
     <!-- Facebook Meta Tags -->
@@ -50,7 +51,7 @@
     </div>
     <div class="right">
         <div class="animal-image-container">
-            <img id="animal-image">
+            <img id="animal-image" alt="The animal image">
         </div>
     </div>
 </main>
@@ -97,7 +98,7 @@
                 })
             })
             first= false
-        }, first ? 0 : 750)
+        }, first ? 0 : 500)
     }
     function playAudio (src) {
         audio.src = src;

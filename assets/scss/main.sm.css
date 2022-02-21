@@ -2,42 +2,46 @@
  *    ,
  * 1  | / @include breakpoint('under', 'md'){
  * 2  | |   body{
- * 3  | |     font-size: 3rem !important;
+ * 3  | |     font-size: 1.25rem !important;
  * 4  | |   }
  * 5  | |   header{
- * 6  | |     &:after{
- * 7  | |       content: " ";
- * 8  | |       position: absolute;
- * 9  | |       top: 105px !important;
- * 10 | |       height: 50px !important;
- * 11 | |       left: 0;
- * 12 | |       width: 100%;
- * 13 | |       background-image: url('/assets/images/interface/header-mobile.svg') !important;
- * 14 | |       background-size: cover;
- * 15 | |     }
- * 16 | |   }
- * 17 | |   main{
- * 18 | |     height: calc(100% - 105px);
- * 19 | |     flex-direction: column-reverse;
- * 20 | |     justify-content: center;
- * 21 | |     align-items: center;
- * 22 | |     text-align: center;
- * 23 | |     .left,.right{
- * 24 | |       width: 100% !important;
- * 25 | |     }
- * 26 | |     #animal-title{
- * 27 | |       //font-size: ;
- * 28 | |     }
- * 29 | |     #animal-image{
- * 30 | |         height: 50vh !important;
- * 31 | |         max-width: 90vw !important;
- * 32 | |         width: auto;
- * 33 | |     }
- * 34 | |     #animal-facts{
- * 35 | |       display: none;
- * 36 | |     }
- * 37 | |   }
- * 38 | \ }
+ * 6  | |     height: 2rem !important;
+ * 7  | |     font-size: 1.25rem;
+ * 8  | |     &:after{
+ * 9  | |       content: " ";
+ * 10 | |       position: absolute;
+ * 11 | |       top: 1.25rem !important;
+ * 12 | |       height: 50px !important;
+ * 13 | |       left: 0;
+ * 14 | |       width: 100%;
+ * 15 | |       background-image: url('/assets/images/interface/header-mobile.svg') !important;
+ * 16 | |       background-size: cover;
+ * 17 | |       //background-position: 100% 100%;
+ * 18 | |     }
+ * 19 | |   }
+ * 20 | |   main{
+ * 21 | |     height: calc(100vh - 3rem);
+ * 22 | |     margin-top: 3rem;
+ * 23 | |     flex-direction: column-reverse;
+ * 24 | |     justify-content: center;
+ * 25 | |     align-items: center;
+ * 26 | |     text-align: center;
+ * 27 | |     .left,.right{
+ * 28 | |       width: 100% !important;
+ * 29 | |     }
+ * 30 | |     #animal-title{
+ * 31 | |       //font-size: ;
+ * 32 | |     }
+ * 33 | |     #animal-image{
+ * 34 | |         height: 50vh !important;
+ * 35 | |         max-width: 90vw !important;
+ * 36 | |         width: auto;
+ * 37 | |     }
+ * 38 | |     #animal-facts{
+ * 39 | |       display: none;
+ * 40 | |     }
+ * 41 | |   }
+ * 42 | \ }
  *    '
  *   main.sm.scss 1:1  root stylesheet */
 
@@ -49,5 +53,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 1  \2502  \250c  @include breakpoint('under', 'md'){\a 2  \2502  \2502    body{\a 3  \2502  \2502      font-size: 3rem !important;\a 4  \2502  \2502    }\a 5  \2502  \2502    header{\a 6  \2502  \2502      &:after{\a 7  \2502  \2502        content: \" \";\a 8  \2502  \2502        position: absolute;\a 9  \2502  \2502        top: 105px !important;\a 10 \2502  \2502        height: 50px !important;\a 11 \2502  \2502        left: 0;\a 12 \2502  \2502        width: 100%;\a 13 \2502  \2502        background-image: url('/assets/images/interface/header-mobile.svg') !important;\a 14 \2502  \2502        background-size: cover;\a 15 \2502  \2502      }\a 16 \2502  \2502    }\a 17 \2502  \2502    main{\a 18 \2502  \2502      height: calc(100% - 105px);\a 19 \2502  \2502      flex-direction: column-reverse;\a 20 \2502  \2502      justify-content: center;\a 21 \2502  \2502      align-items: center;\a 22 \2502  \2502      text-align: center;\a 23 \2502  \2502      .left,.right{\a 24 \2502  \2502        width: 100% !important;\a 25 \2502  \2502      }\a 26 \2502  \2502      #animal-title{\a 27 \2502  \2502        //font-size: ;\a 28 \2502  \2502      }\a 29 \2502  \2502      #animal-image{\a 30 \2502  \2502          height: 50vh !important;\a 31 \2502  \2502          max-width: 90vw !important;\a 32 \2502  \2502          width: auto;\a 33 \2502  \2502      }\a 34 \2502  \2502      #animal-facts{\a 35 \2502  \2502        display: none;\a 36 \2502  \2502      }\a 37 \2502  \2502    }\a 38 \2502  \2514  }\a    \2575 \a   main.sm.scss 1:1  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 1  \2502  \250c  @include breakpoint('under', 'md'){\a 2  \2502  \2502    body{\a 3  \2502  \2502      font-size: 1.25rem !important;\a 4  \2502  \2502    }\a 5  \2502  \2502    header{\a 6  \2502  \2502      height: 2rem !important;\a 7  \2502  \2502      font-size: 1.25rem;\a 8  \2502  \2502      &:after{\a 9  \2502  \2502        content: \" \";\a 10 \2502  \2502        position: absolute;\a 11 \2502  \2502        top: 1.25rem !important;\a 12 \2502  \2502        height: 50px !important;\a 13 \2502  \2502        left: 0;\a 14 \2502  \2502        width: 100%;\a 15 \2502  \2502        background-image: url('/assets/images/interface/header-mobile.svg') !important;\a 16 \2502  \2502        background-size: cover;\a 17 \2502  \2502        //background-position: 100% 100%;\a 18 \2502  \2502      }\a 19 \2502  \2502    }\a 20 \2502  \2502    main{\a 21 \2502  \2502      height: calc(100vh - 3rem);\a 22 \2502  \2502      margin-top: 3rem;\a 23 \2502  \2502      flex-direction: column-reverse;\a 24 \2502  \2502      justify-content: center;\a 25 \2502  \2502      align-items: center;\a 26 \2502  \2502      text-align: center;\a 27 \2502  \2502      .left,.right{\a 28 \2502  \2502        width: 100% !important;\a 29 \2502  \2502      }\a 30 \2502  \2502      #animal-title{\a 31 \2502  \2502        //font-size: ;\a 32 \2502  \2502      }\a 33 \2502  \2502      #animal-image{\a 34 \2502  \2502          height: 50vh !important;\a 35 \2502  \2502          max-width: 90vw !important;\a 36 \2502  \2502          width: auto;\a 37 \2502  \2502      }\a 38 \2502  \2502      #animal-facts{\a 39 \2502  \2502        display: none;\a 40 \2502  \2502      }\a 41 \2502  \2502    }\a 42 \2502  \2514  }\a    \2575 \a   main.sm.scss 1:1  root stylesheet";
 }

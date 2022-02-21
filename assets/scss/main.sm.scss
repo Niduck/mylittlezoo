@@ -1,21 +1,25 @@
 @include breakpoint('under', 'md'){
   body{
-    font-size: 3rem !important;
+    font-size: 1.25rem !important;
   }
   header{
+    height: 2rem !important;
+    font-size: 1.25rem;
     &:after{
       content: " ";
       position: absolute;
-      top: 105px !important;
+      top: 1.25rem !important;
       height: 50px !important;
       left: 0;
       width: 100%;
       background-image: url('/assets/images/interface/header-mobile.svg') !important;
       background-size: cover;
+      //background-position: 100% 100%;
     }
   }
   main{
-    height: calc(100% - 105px);
+    height: calc(100vh - 3rem);
+    margin-top: 3rem;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
