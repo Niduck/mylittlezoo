@@ -56,11 +56,11 @@ main{
     justify-content: center;
     align-items: center;
     #animal-title{
-      font-size: 124px;
+      font-size: 94px;
     }
     #animal-description{
       //font-size: 94px;
-      font-size: 52px;
+      font-size: 32px;
       font-family: "Nunito";
       i{
         font-weight: 600;
@@ -70,7 +70,9 @@ main{
     }
     #animal-facts{
       text-align: center;
-      font-size: 64px;
+      //font-size: 48px;
+      font-size: 24px;
+      font-family: "Nunito";
       margin-top: 60px;
       color: var(--accent-color);
       
@@ -87,8 +89,8 @@ main{
     justify-content: center;
     align-items: center;
     #animal-image{
-      max-width: 1024px;
-      max-height: 1024px;
+      max-width: 50vw;
+      max-height: calc(100vh - 350px);
       width: auto;
       height: auto;
     }

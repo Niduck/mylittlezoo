@@ -535,41 +535,41 @@
     }
 
     //*** Speech recognition (removed because of lack of support)
-    // let SpeechRecognition = webkitSpeechRecognition;
-    // var grammar = '#JSGF V1.0; grammar animals; public <animaux> = poule | chien | cot cot;'
-    // var recognition = new SpeechRecognition();
-    // var speechRecognitionList = new webkitSpeechGrammarList();
-    // speechRecognitionList.addFromString(grammar, 1);
-    // recognition.grammars = speechRecognitionList;
-    // recognition.continuous = false;
-    // recognition.lang = 'fr-FR';
-    // recognition.interimResults = false;
-    // recognition.maxAlternatives = 1;
-    //
-    // document.body.onclick = function () {
-    //     recognition.start();
-    //     container.classList.add('listening')
-    //     console.log('Ready to receive a color command.');
-    // }
-    // recognition.onresult = function (event) {
-    //     var result = event.results[0][0].transcript;
-    //     container.classList.remove('listening')
-    //     console.log('Recognition result : '+result);
-    //     for (let index in icons) {
-    //         let icon = icons[index];
-    //         if (!Object.prototype.hasOwnProperty.call(icon, 'grammar')) {
-    //             icon.grammar = []
-    //         }
-    //         icon.grammar.push(icon.name.toLowerCase());
-    //         console.log(icon.grammar);
-    //         for(grammar of icon.grammar){
-    //             if(result.split(' ').includes(grammar)){
-    //                 displayArnimal(index);
-    //                 return;
-    //             }
-    //         }
-    //     }
-    // }
+    let SpeechRecognition = webkitSpeechRecognition;
+    var grammar = '#JSGF V1.0; grammar animals; public <animaux> = poule | chien | cot cot;'
+    var recognition = new SpeechRecognition();
+    var speechRecognitionList = new webkitSpeechGrammarList();
+    speechRecognitionList.addFromString(grammar, 1);
+    recognition.grammars = speechRecognitionList;
+    recognition.continuous = false;
+    recognition.lang = 'fr-FR';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    document.body.onclick = function () {
+        recognition.start();
+        container.classList.add('listening')
+        console.log('Ready to receive a color command.');
+    }
+    recognition.onresult = function (event) {
+        var result = event.results[0][0].transcript;
+        container.classList.remove('listening')
+        console.log('Recognition result : '+result);
+        for (let index in icons) {
+            let icon = icons[index];
+            if (!Object.prototype.hasOwnProperty.call(icon, 'grammar')) {
+                icon.grammar = []
+            }
+            icon.grammar.push(icon.name.toLowerCase());
+            console.log(icon.grammar);
+            for(grammar of icon.grammar){
+                if(result.split(' ').includes(grammar)){
+                    displayArnimal(index);
+                    return;
+                }
+            }
+        }
+    }
 </script>
 
 </body>

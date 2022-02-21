@@ -15,8 +15,8 @@
             },
             colors: {
                 'background': '#C8E7E0',
-                'text': '#64AD9C',
-                'accent': '#64AD9C'
+                'text': '#387466',
+                'accent': '#387466'
             }
         },
         {
