@@ -62,27 +62,29 @@
     let first = true;
     render(index)
     let audio = new Audio();
-    function render (index) {
-        if(index > zoo.length -1){
+    function render (_index) {
+        if(_index > zoo.length -1){
             index = 0
+            _index = index
         }
-        if(index < 0){
+        if(_index < 0){
             index = zoo.length -1
+            _index = index
         }
         document.body.classList.toggle('animal-changing')
-        document.body.style.backgroundColor = zoo[index].colors.background;
+        document.body.style.backgroundColor = zoo[_index].colors.background;
         let image = document.getElementById("animal-image");
         let title = document.getElementById("animal-title");
         let desc = document.getElementById("animal-description");
         let facts = document.getElementById("animal-facts");
         facts.innerHTML = "";
         setTimeout(function () {
-            document.body.style.setProperty('--accent-color', zoo[index].colors.accent);
+            document.body.style.setProperty('--accent-color', zoo[_index].colors.accent);
             document.body.classList.remove('animal-changing')
-            image.src = zoo[index].path;
-            title.innerText = zoo[index].title
-            desc.innerHTML = zoo[index].description
-            for(let fact of zoo[index].facts){
+            image.src = zoo[_index].path;
+            title.innerText = zoo[_index].title
+            desc.innerHTML = zoo[_index].description
+            for(let fact of zoo[_index].facts){
                 let p = document.createElement("p")
                     p.append(fact)
                 facts.append(p);
@@ -91,11 +93,11 @@
             sel.forEach(node => {
                 node.addEventListener('click', e => {
                     let soundName = e.target.getAttribute('data-sound');
-                    playAudio(zoo[index].sounds[soundName]);
+                    playAudio(zoo[_index].sounds[soundName]);
                 })
             })
             first= false
-        }, first ? 0 : 500)
+        }, first ? 0 : 750)
     }
     function playAudio (src) {
         audio.src = src;
