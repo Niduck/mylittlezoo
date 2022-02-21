@@ -1,0 +1,34 @@
+$breakpoints: (
+        xs: 32rem, // ~512px
+        sm: 48rem, // ~768px
+        md: 64rem, // ~1024px
+        lg: 80rem, // ~1280px
+        xl: 90rem, // ~1440px
+        tk: 128rem, // ~2k
+        fk: 240rem // ~4k
+) !default;
+$breakpoints-contexts :(xs, sm, md) !default;
+$breakpoints-directions: (
+        under: 'max-width',
+        over: 'min-width',
+        before: 'max-width',
+        after: 'min-width',
+) !default;
+
+@mixin breakpoint($direction : 'under', $breakpoint: 'lg', $media : 'screen') {
+  @media #{$media} and (map-get($map: $breakpoints-directions, $key: $direction): map-get($map: $breakpoints, $key: $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-context($class, $directions: ('under', 'over'), $breakpoints: $breakpoints-contexts) {
+  @each $breakpoint in $breakpoints {
+    @each $direction in $directions {
+      .#{$class}-#{$direction}-#{$breakpoint} {
+        @include breakpoint($direction, $breakpoint) {
+          @content
+        }
+      }
+    }
+  }
+}

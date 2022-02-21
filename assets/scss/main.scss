@@ -1,0 +1,99 @@
+@import "mixins";
+@import "main.sm";
+
+html, body{
+  font-family: 'Sacramento', cursive;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  transition: background-color linear 300ms;
+  color:#222222;
+}
+
+body{
+  &.animal-changing{
+    main{
+      opacity: 0;
+    }
+  }
+}
+header{
+  width: 100%;
+  height: 160px;
+  display: flex;
+  position: relative;
+  &:after{
+    content: " ";
+    position: absolute;
+    top: 75px;
+    height: 150px;
+    left: 0;
+    width: 100%;
+    background-image: url('/assets/images/interface/header-2.svg');
+    background-size: cover;
+  }
+  .title{
+    margin: auto;
+    font-size: 92px;
+  }
+}
+main{
+  height: calc(100vh - 280px);
+  width: calc(100vw - 10%);
+  padding: 0 5% ;
+  display: flex;
+  --transition-duration: 500ms;
+  -webkit-transition: opacity var(--transition-duration) ease-in-out;
+  -moz-transition: opacity var(--transition-duration) ease-in-out;
+  -o-transition: opacity var(--transition-duration)s ease-in-out;
+  transition: opacity var(--transition-duration) ease-in-out;
+  .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #animal-title{
+      font-size: 124px;
+    }
+    #animal-description{
+      //font-size: 94px;
+      font-size: 52px;
+      font-family: "Nunito";
+      i{
+        font-weight: 600;
+        color: var(--accent-color);
+        cursor: pointer;
+      }
+    }
+    #animal-facts{
+      text-align: center;
+      font-size: 64px;
+      margin-top: 60px;
+      color: var(--accent-color);
+      
+      p{
+        margin: 10px 0;
+      }
+    }
+  
+  }
+  .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #animal-image{
+      max-width: 1024px;
+      max-height: 1024px;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+footer{
+  height: 120px;
+}

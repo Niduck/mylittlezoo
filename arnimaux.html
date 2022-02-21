@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arnimaux</title>
+    <meta name="description" content="Imagier sonore pour les enfants">
+    <meta name="keywords" content="Imagier, Animaux, Arnimaux, Imagier Sonore, Bruitages animaux">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Lato&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8T0JWT80NF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8T0JWT80NF');
+    </script>
+</head>
+<body>
+<div id="arnimals-left">
+    <div id="preview-container">
+    </div>
+</div>
+<div id="arnimals-right">
+    <div class="line">
+        <div class="line-item">
+        </div>
+        <div class="line-item center">
+            <div class="logo">Arnimaux</div>
+
+        </div>
+        <div id="button-menu" class="line-item end button">
+            <svg class="mute-icon">
+                <use xlink:href="#help"></use>
+            </svg>
+        </div>
+    </div>
+    <div id="svg-container">
+        <img id="svg-icon">
+    </div>
+    <div id="svg-name"></div>
+    <div class="footer">
+
+        <div id="button-sound" class="footer-center button">
+            <svg class="mute-icon">
+                <use xlink:href="#volume"></use>
+            </svg>
+        </div>
+        <div id="button-shuffle" class="footer-center button">
+            <svg class="mute-icon">
+                <use xlink:href="#shuffle"></use>
+            </svg>
+        </div>
+        <div id="button-automatic" class="footer-center button">
+            <svg class="mute-icon">
+                <use id="button-automatic-icon" href="#play-button"></use>
+            </svg>
+        </div>
+        <div id="button-fullscreen" class="footer-center button">
+            <svg>
+                <use id="button-fullscreen-icon" href="#expand"></use>
+            </svg>
+        </div>
+    </div>
+</div>
+<template id="artnimal">
+    <div class="preview">
+        <div class="svg-container">
+            <img class="svg-icon"/>
+        </div>
+    </div>
+</template>
+<div id="ios-install">
+    <div class="install-overlay"></div>
+    <div class="install-modal">
+        Vous pouvez installer l'application sur votre iPhone en cliquant sur
+        <svg class="inline-icon">
+            <use xlink:href="#ios-share"></use>
+        </svg>
+        puis <strong>Sur l'écran d'accueil</strong>.
+    </div>
+</div>
+<div id="menu-modal">
+    <div class="line">
+        <div class="line-item">
+        </div>
+        <div class="line-item center">
+            <div class="logo">Arnimaux</div>
+        </div>
+        <div id="button-close" class="line-item end button">
+            <svg class="mute-icon">
+                <use xlink:href="#close"></use>
+            </svg>
+        </div>
+    </div>
+    <hr>
+    <div class="flex-column">
+        <div class="flex-item">
+            <div class="line">
+                <div class="line-item start">
+                    <div class="title">Contact</div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="line-item start">
+                    Par email&nbsp;:&nbsp;<a href="mailto:contact@arnimaux.fr">contact@arnimaux.fr</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-item is-growing">
+            <div class="line">
+                <div class="line-item start">
+                    <div class="title">Crédits</div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="line-item start">
+                    Icones&nbsp;:&nbsp; <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+                </div>
+            </div>
+            <div class="line">
+                <div class="line-item start">
+                    <div>
+                        Illustrations&nbsp;:&nbsp;
+                    </div>
+                    <a href="https://www.iconfinder.com/Jinoyu" target="_blank">Microdot Graphic</a>
+                </div>
+            </div>
+            <div class="line">
+                <div class="line-item start">
+                    <div>
+                        Bruitages&nbsp;:&nbsp;
+                    </div>
+                    <a href="http://www.universal-soundbank.com/" target="_blank">Universal-soundbank</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-item">
+            <div class="line gh">
+                <div class="line-item start">
+                    <div class="title">Mentions légales</div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="line-item start">
+                    Copyright © 2021. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<svg width="0" height="0" class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="minimize">
+        <path d="M506.132 477.792L383.034 354.693h78.869c11.068 0 20.039-8.971 20.039-20.039s-8.972-20.039-20.039-20.039h-87.17c-33.149 0-60.117 26.969-60.117 60.117V460.9c0 11.068 8.971 20.039 20.039 20.039s20.039-8.972 20.039-20.039v-77.867L477.791 506.13a19.981 19.981 0 0014.171 5.869 19.985 19.985 0 0014.171-5.869c7.824-7.825 7.824-20.513-.001-28.338zM137.269 314.615h-87.17c-11.068 0-20.039 8.971-20.039 20.039s8.971 20.039 20.039 20.039h78.869L5.869 477.792c-7.825 7.826-7.825 20.514 0 28.339A19.981 19.981 0 0020.04 512a19.985 19.985 0 0014.171-5.869l123.097-123.097v77.867c0 11.068 8.971 20.039 20.039 20.039s20.039-8.972 20.039-20.039v-86.168c0-33.149-26.969-60.118-60.117-60.118zM506.132 5.87c-7.826-7.826-20.515-7.826-28.34 0L354.693 128.968V51.1c0-11.068-8.971-20.039-20.039-20.039s-20.039 8.971-20.039 20.039v86.168c0 33.149 26.969 60.117 60.117 60.117h87.17c11.068 0 20.039-8.971 20.039-20.039s-8.972-20.039-20.039-20.039h-78.869L506.132 34.209c7.825-7.826 7.825-20.514 0-28.339zM177.347 30.059c-11.068 0-20.039 8.971-20.039 20.039v78.869L34.21 5.87c-7.826-7.826-20.515-7.826-28.34 0-7.825 7.826-7.825 20.514 0 28.339l123.097 123.098H50.098c-11.068 0-20.039 8.971-20.039 20.039s8.971 20.039 20.039 20.039h87.17c33.149 0 60.117-26.969 60.117-60.117v-87.17c.001-11.067-8.97-20.039-20.038-20.039z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="expand">
+        <path d="M191.142 162.858L68.285 40H147c11.046 0 20-8.954 20-20s-8.954-20-20-20H60C26.916 0 0 26.916 0 60v87c0 11.046 8.954 20 20 20s20-8.954 20-20V68.285l122.858 122.858C166.763 195.048 171.881 197 177 197s10.237-1.952 14.142-5.857c7.811-7.811 7.811-20.475 0-28.285zm0 158c-7.811-7.81-20.474-7.811-28.284-.001L40 443.715V365c0-11.046-8.954-20-20-20s-20 8.954-20 20v87c0 33.084 26.916 60 60 60h87c11.046 0 20-8.954 20-20s-8.954-20-20-20H68.285l122.857-122.857c7.811-7.811 7.811-20.475 0-28.285zM492 345c-11.046 0-20 8.954-20 20v78.715L349.142 320.857c-7.811-7.811-20.474-7.811-28.284 0-7.81 7.811-7.811 20.475 0 28.285L443.715 472H365c-11.046 0-20 8.954-20 20s8.954 20 20 20h87c33.084 0 60-26.916 60-60v-87c0-11.046-8.954-20-20-20zM452 0h-87c-11.046 0-20 8.954-20 20s8.954 20 20 20h78.715L320.858 162.857c-7.811 7.811-7.811 20.475 0 28.285A19.933 19.933 0 00335 197a19.936 19.936 0 0014.142-5.857L472 68.285V147c0 11.046 8.954 20 20 20s20-8.954 20-20V60c0-33.084-26.916-60-60-60z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="help">
+        <path d="M255.996 384.004c-11.776 0-21.333 9.557-21.333 21.333s9.557 21.333 21.333 21.333c11.776 0 21.333-9.557 21.333-21.333s-9.557-21.333-21.333-21.333z"></path>
+        <path d="M437.016 74.984c-99.979-99.979-262.075-99.979-362.033.002-99.978 99.978-99.978 262.073.004 362.031 99.954 99.978 262.05 99.978 362.029-.002 99.979-99.956 99.979-262.051 0-362.031zm-30.168 331.86c-83.318 83.318-218.396 83.318-301.691.004-83.318-83.299-83.318-218.377-.002-301.693 83.297-83.317 218.375-83.317 301.691 0s83.316 218.394.002 301.689z"></path>
+        <path d="M271.295 86.684c-53.025-9.308-100.632 31.063-100.632 83.987 0 11.782 9.551 21.333 21.333 21.333 11.782 0 21.333-9.551 21.333-21.333 0-26.507 23.776-46.67 50.584-41.964 16.882 2.968 31.079 17.165 34.048 34.052 3.299 18.783-5.487 36.533-21.417 45.315-26.377 14.544-41.882 43.645-41.882 74.746v37.184c0 11.782 9.551 21.333 21.333 21.333 11.782 0 21.333-9.551 21.333-21.333V282.82c0-16.217 7.725-30.716 19.816-37.382 31.705-17.479 49.333-53.091 42.839-90.063-6.077-34.572-34.119-62.614-68.688-68.691z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="pause">
+        <path d="M256 0C114.618 0 0 114.618 0 256s114.618 256 256 256 256-114.618 256-256S397.382 0 256 0zm0 469.333c-117.818 0-213.333-95.515-213.333-213.333S138.182 42.667 256 42.667 469.333 138.182 469.333 256 373.818 469.333 256 469.333z"></path>
+        <path d="M213.333 128h-64C137.551 128 128 137.551 128 149.333v213.333c0 11.782 9.551 21.333 21.333 21.333h64c11.782 0 21.333-9.551 21.333-21.333V149.333c.001-11.782-9.551-21.333-21.333-21.333zM192 341.333h-21.333V170.667H192v170.666zM362.667 128h-64c-11.782 0-21.333 9.551-21.333 21.333v213.333c0 11.782 9.551 21.333 21.333 21.333h64c11.782 0 21.333-9.551 21.333-21.333V149.333c0-11.782-9.551-21.333-21.333-21.333zm-21.334 213.333H320V170.667h21.333v170.666z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="menu">
+        <path d="M256 0C114.618 0 0 114.618 0 256s114.618 256 256 256 256-114.618 256-256S397.382 0 256 0zm0 469.333c-117.818 0-213.333-95.515-213.333-213.333S138.182 42.667 256 42.667 469.333 138.182 469.333 256 373.818 469.333 256 469.333z"></path>
+        <path d="M362.667 149.333H149.333c-11.782 0-21.333 9.551-21.333 21.333 0 11.782 9.551 21.333 21.333 21.333h213.333c11.782 0 21.333-9.551 21.333-21.333.001-11.781-9.55-21.333-21.332-21.333zm0 85.334H149.333C137.551 234.667 128 244.218 128 256s9.551 21.333 21.333 21.333h213.333c11.782 0 21.333-9.551 21.333-21.333s-9.55-21.333-21.332-21.333zm0 85.333H149.333C137.551 320 128 329.551 128 341.333c0 11.782 9.551 21.333 21.333 21.333h213.333c11.782 0 21.333-9.551 21.333-21.333C384 329.551 374.449 320 362.667 320z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="close">
+        <path d="M437.016 74.984c-99.979-99.979-262.075-99.979-362.033.002-99.978 99.978-99.978 262.073.004 362.031 99.954 99.978 262.05 99.978 362.029-.002 99.979-99.956 99.979-262.051 0-362.031zm-30.168 331.86c-83.318 83.318-218.396 83.318-301.691.004-83.318-83.299-83.318-218.377-.002-301.693 83.297-83.317 218.375-83.317 301.691 0s83.316 218.394.002 301.689z"></path>
+        <path d="M361.592 150.408c-8.331-8.331-21.839-8.331-30.17 0l-75.425 75.425-75.425-75.425c-8.331-8.331-21.839-8.331-30.17 0s-8.331 21.839 0 30.17l75.425 75.425L150.43 331.4c-8.331 8.331-8.331 21.839 0 30.17 8.331 8.331 21.839 8.331 30.17 0l75.397-75.397 75.419 75.419c8.331 8.331 21.839 8.331 30.17 0 8.331-8.331 8.331-21.839 0-30.17l-75.419-75.419 75.425-75.425c8.331-8.331 8.331-21.838 0-30.17z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310.002 310.002" id="ios-share">
+        <path d="M120.605 70.607l19.396-19.395v153.786c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15V51.213l19.394 19.394a14.952 14.952 0 0010.606 4.394c3.839 0 7.678-1.464 10.606-4.394 5.858-5.858 5.858-15.355 0-21.213L165.61 4.396a15.3 15.3 0 00-1.104-.997c-.166-.136-.341-.254-.51-.381-.222-.167-.439-.337-.67-.492-.207-.139-.422-.259-.635-.386-.207-.125-.41-.255-.624-.369-.217-.116-.439-.214-.661-.318-.223-.106-.441-.216-.67-.311-.214-.089-.432-.16-.649-.238-.244-.088-.485-.182-.736-.257-.216-.065-.435-.113-.652-.168-.256-.065-.51-.137-.771-.188-.25-.049-.503-.078-.755-.115-.232-.033-.46-.077-.695-.1a15.342 15.342 0 00-1.389-.07c-.03 0-.059-.004-.089-.004-.029 0-.059.004-.088.004-.464.002-.928.025-1.391.07-.23.023-.453.066-.68.098-.258.037-.516.067-.771.118-.254.05-.5.12-.749.183-.226.057-.452.106-.676.173-.241.073-.476.164-.712.249-.225.081-.452.155-.674.247-.22.091-.43.198-.644.299-.23.108-.462.211-.688.331-.204.109-.396.233-.595.352-.223.132-.447.258-.664.403-.217.145-.42.307-.629.462-.184.137-.371.264-.549.411-.365.299-.714.616-1.049.947-.016.016-.033.029-.05.045l-45.002 45c-5.858 5.858-5.858 15.355 0 21.213 5.861 5.858 15.359 5.856 21.216 0z"></path>
+        <path d="M255.001 100.002h-40c-8.284 0-15 6.716-15 15s6.716 15 15 15h25v150h-170v-150h25c8.284 0 15-6.716 15-15s-6.716-15-15-15h-40c-8.284 0-15 6.716-15 15v180c0 8.284 6.716 15 15 15h200c8.284 0 15-6.716 15-15v-180c0-8.284-6.716-15-15-15z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="volume">
+        <path d="M256 0C114.618 0 0 114.618 0 256s114.618 256 256 256 256-114.618 256-256S397.382 0 256 0zm0 469.333c-117.818 0-213.333-95.515-213.333-213.333S138.182 42.667 256 42.667 469.333 138.182 469.333 256 373.818 469.333 256 469.333z"></path>
+        <path d="M267.789 130.253l-78.571 39.296a10.681 10.681 0 01-4.772 1.117h-56.448c-23.558 0-42.667 19.109-42.667 42.667v85.333c0 23.558 19.109 42.667 42.667 42.667h56.448c1.669 0 3.309.386 4.774 1.118l78.569 39.295c14.185 7.094 30.876-3.22 30.876-19.08V149.333c0-15.859-16.692-26.174-30.876-19.08zm-11.791 197.891l-47.695-23.854a53.356 53.356 0 00-23.857-5.624h-56.448v-85.333h56.448a53.347 53.347 0 0023.855-5.623l47.697-23.855v144.289zm100.56-119.952c-2.82-11.44-14.379-18.428-25.819-15.608-11.44 2.82-18.428 14.379-15.608 25.819 6.019 24.421 6.818 49.803.574 75.173-2.815 11.441 4.177 22.998 15.617 25.813s22.998-4.177 25.813-15.617c8.015-32.568 7-64.837-.577-95.58z"></path>
+        <path d="M414.597 188.184c-4.577-13.022-9.258-22.707-12.656-28.422-6.022-10.127-19.114-13.454-29.24-7.431-10.127 6.022-13.454 19.114-7.431 29.24 2.034 3.421 5.503 10.599 9.075 20.762 14.447 41.1 14.447 85.525-9.41 128.679-5.7 10.311-1.962 23.291 8.349 28.992s23.291 1.962 28.992-8.349c30.472-55.122 30.472-111.832 12.321-163.471z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="shuffle">
+        <path d="M21.333 149.333H64c19.02 0 37.265 4.97 53.357 14.283 10.198 5.901 23.248 2.419 29.15-7.779s2.419-23.248-7.779-29.15c-22.542-13.045-48.15-20.021-74.728-20.021H21.333C9.551 106.667 0 116.218 0 128s9.551 21.333 21.333 21.333zm298.667 0h42.667v64c0 17.888 20.692 27.833 34.66 16.659l106.667-85.333c10.675-8.54 10.675-24.777 0-33.317L397.327 26.008c-13.968-11.175-34.66-1.23-34.66 16.659v64H320c-82.481 0-149.333 66.853-149.333 149.333 0 58.917-47.75 106.667-106.667 106.667H21.333C9.551 362.667 0 372.218 0 384s9.551 21.333 21.333 21.333H64c82.481 0 149.333-66.853 149.333-149.333 0-58.917 47.75-106.667 106.667-106.667zm85.333-62.28L456.517 128l-51.183 40.947V87.053zm98.661 280.288l-106.667-85.333c-13.968-11.175-34.66-1.23-34.66 16.659v64.011h-42.669c-21.273 0-41.606-6.244-58.959-17.771-9.814-6.519-23.055-3.847-29.574 5.967-6.519 9.814-3.847 23.055 5.967 29.574 24.291 16.135 52.822 24.896 82.566 24.896h42.669v63.989c0 17.888 20.692 27.833 34.66 16.659l106.667-85.333c10.675-8.541 10.675-24.777 0-33.318zm-98.661 57.606v-81.893L456.517 384l-51.184 40.947z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="play-button">
+        <path d="M256 0C114.618 0 0 114.618 0 256s114.618 256 256 256 256-114.618 256-256S397.382 0 256 0zm0 469.333c-117.818 0-213.333-95.515-213.333-213.333S138.182 42.667 256 42.667 469.333 138.182 469.333 256 373.818 469.333 256 469.333z"></path>
+        <path d="M375.467 238.933l-170.667-128c-14.064-10.548-34.133-.513-34.133 17.067v256c0 17.58 20.07 27.615 34.133 17.067l170.667-128c11.377-8.534 11.377-25.6 0-34.134zm-162.134 102.4V170.667L327.111 256l-113.778 85.333z"></path>
+    </symbol>
+</svg>
+<script>
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+    // Detects if device is in standalone mode
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+    // Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        let modal = document.getElementById('ios-install');
+        modal.classList.add('visible');
+        modal.addEventListener('click', function () {
+            modal.classList.remove('visible');
+        })
+
+    }
+</script>
+<script>
+    console.log('%c Arnimaux v4.0.0', 'background: #1E90FF; color: white; border-radius:4px; padding: 4px 8px;');
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('worker.js');
+    }
+    ;
+    document.getElementById('button-menu').addEventListener("click", function () {
+        let m = document.getElementById('menu-modal');
+        if (!m.classList.contains('is-visible')) {
+            m.classList.add('is-visible');
+        }
+    })
+    document.getElementById('button-close').addEventListener("click", function () {
+        let m = document.getElementById('menu-modal');
+        if (m.classList.contains('is-visible')) {
+            m.classList.remove('is-visible');
+        }
+    })
+</script>
+<script type="text/javascript" src="arnimals.js"></script>
+<script>
+    var audio = new Audio();
+    audio.volume = 1;
+    let arnimal = null;
+    let options = {
+        index: 0,
+        random: false,
+        rexclude: [],
+        _random: function (_min, _max) {
+            //?Reset excluded numbers
+            if (this.rexclude.length >= _max) {
+                this.rexclude = [];
+            }
+            //?Generate random number
+            let min = Math.ceil(_min);
+            let max = Math.floor(_max);
+            let random = Math.floor(Math.random() * (max - min + 1)) + min;
+            if (this.rexclude.includes(random)) {
+                return this._random(_min, _max);
+            }
+            this.rexclude.push(random);
+            return random;
+        },
+        automatic: false,
+        _next: function () {
+            if (this.random) {
+                return this._random(0, arnimals.length - 1);
+            }
+            if (this.index < arnimals.length - 1) {
+                this.index++;
+            } else {
+                this.index = 0;
+            }
+            return this.index;
+        },
+        _previous: function () {
+            if (this.random) {
+                return this._random(0, arnimals.length - 1);
+            }
+            if (this.index > 0) {
+                this.index--;
+            } else {
+                this.index = arnimals.length - 1
+            }
+            return this.index;
+        },
+        _render: function (i) {
+            arnimal = arnimals[i];
+            let container = document.getElementById('svg-container')
+            container.classList.add('hide');
+            container.classList.remove('show');
+            if (arnimal.audio) {
+                document.getElementById('button-sound').style.display = 'flex';
+            } else {
+                document.getElementById('button-sound').style.display = 'none';
+            }
+            document.getElementById('svg-name').innerText = arnimal.name;
+            setTimeout(function () {
+                let svg = document.querySelector('#svg-icon');
+                let suContainer = document.querySelector('#arnimals-right');
+                suContainer.style.backgroundColor = arnimals[i].color;
+                let root = document.documentElement;
+                root.style.setProperty('--shadow-color', arnimals[i].color.substring(0, arnimals[i].color.length - 2));
+                svg.src = `assets/images/${arnimals[i].image}`;
+                setTimeout(function () {
+                    container.classList.add('show');
+                    container.classList.remove('hide');
+                }, 150)
+            }, 150)
+        },
+        _play: function () {
+            audio.src = `assets/audio/${arnimal.audio}`;
+            return new Promise(function (resolve, reject) {
+                audio.addEventListener('loadedmetadata', function () {
+                    audio.volume = 1;
+                    audio.play();
+                    document.getElementById('button-sound').style.setProperty('--button-animation-duration', `${audio.duration}s`)
+                    document.getElementById('button-sound').classList.add('active');
+                    document.getElementById('button-sound').classList.add('animate');
+                    setTimeout(function () {
+                        document.getElementById('button-sound').classList.remove('active');
+                        document.getElementById('button-sound').classList.remove('animate');
+                        resolve(audio);
+                    }, audio.duration * 1000)
+                });
+            });
+        }
+    };
+
+    //*** Initialize
+    for (let index in arnimals) {
+        let icon = arnimals[index];
+        var tmpl = document.getElementById("artnimal");
+        var clone = document.importNode(tmpl.content, true);
+        let container = clone.querySelector('.svg-container');
+        let svg = clone.querySelector('.svg-icon');
+        container.style.backgroundColor = icon.color;
+        svg.src = `assets/images/${arnimals[index].image}`;
+        // svg.attributes.getNamedItem('xlink:href').value = `#${icon.id}`
+
+        document.getElementById('preview-container').appendChild(clone);
+        let nodes = document.querySelectorAll('#preview-container .preview');
+        nodes[nodes.length - 1].addEventListener('click', function (e) {
+            options._render(index)
+            options.index = index;
+        })
+
+    }
+
+
+    function debounce (func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+    let delayed = {};
+    options._render(options.index);
+
+    let automatic = function () {
+        clearTimeout(delayed.change);
+        clearTimeout(delayed.audio);
+        if (arnimal.audio) {
+            delayed.audio = setTimeout(function () {
+                options._play().then(function (audio) {
+                    delayed.change = setTimeout(function () {
+                        let i = options._next();
+                        options._render(i);
+                        automatic(i);
+                    }, 2000);
+                })
+            }, 2000)
+        } else {
+            delayed.change = setTimeout(function () {
+                let i = options._next();
+                options._render(i);
+                automatic(i);
+            }, 4000)
+        }
+    }
+    //*** Event listeners
+    window.addEventListener('keyup', function (e) {
+        if (e.keyCode === 39) {
+            let i = options._next();
+            options._render(i);
+        }
+        if (e.keyCode === 37) {
+            let i = options._previous();
+            options._render(i);
+        }
+    })
+    document.getElementById('button-shuffle').addEventListener('click', function (e) {
+        options.random = !options.random;
+        let target = document.getElementById('button-shuffle');
+        if (target.classList.contains('active')) {
+            target.classList.remove('active')
+        } else {
+            target.classList.add('active')
+        }
+    });
+    document.getElementById('button-fullscreen').addEventListener('click', function(){
+        let target = document.getElementById('button-fullscreen');
+        let ticon = document.getElementById('button-fullscreen-icon');
+        let body = document.body;
+        if (!body.classList.contains('fullscreen')) {
+            body.classList.add('fullscreen')
+            target.classList.add('active')
+            ticon.setAttribute('href', '#minimize')
+        }
+        else{
+            if (body.classList.contains('fullscreen')) {
+                body.classList.remove('fullscreen')
+                target.classList.remove('active')
+                ticon.setAttribute('href', '#expand')
+            }
+        }
+    })
+    document.getElementById('button-automatic').addEventListener('click', function () {
+        options.automatic = !options.automatic;
+        let target = document.getElementById('button-automatic');
+        let ticon = document.getElementById('button-automatic-icon');
+        if (target.classList.contains('active')) {
+            target.classList.remove('active')
+            ticon.setAttribute('href', '#play-button')
+        } else {
+            target.classList.add('active')
+            ticon.setAttribute('href', '#pause')
+
+        }
+        if (options.automatic) {
+            automatic(options.index);
+        } else {
+            clearTimeout(delayed.change);
+            clearTimeout(delayed.audio);
+        }
+    });
+    //? Sound buttons
+    document.getElementById('svg-container').addEventListener('click', function () {
+        options._play();
+    });
+    document.getElementById('button-sound').addEventListener('click', function () {
+        options._play();
+    });
+
+    let onSwipeLeft = function (e) {
+        if (options.automatic) {
+            return false;
+        }
+        let i = options._next();
+        options._render(i);
+    }
+    let onSwipeRight = function (e) {
+        if (options.automatic) {
+            return false;
+        }
+        let i = options._previous();
+        options._render(i);
+    }
+    let onSwipeDown = function (e) {
+        let body = document.body;
+        if (!body.classList.contains('fullscreen')) {
+            body.classList.add('fullscreen')
+        }
+    }
+    let onSwipeUp = function (e) {
+        let body = document.body;
+        if (body.classList.contains('fullscreen')) {
+            body.classList.remove('fullscreen')
+        }
+    }
+    //? @source : https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+    let right = document.getElementById('arnimals-right');
+    right.addEventListener('touchstart', handleTouchStart, false);
+    right.addEventListener('touchmove', handleTouchMove, false);
+    var xDown = null;
+    var yDown = null;
+
+    function handleTouchStart (evt) {
+        const firstTouch = evt.touches[0];
+        xDown = firstTouch.clientX;
+        yDown = firstTouch.clientY;
+    }
+
+    function handleTouchMove (evt) {
+        if (!xDown || !yDown) {
+            return;
+        }
+
+        var xUp = evt.touches[0].clientX;
+        var yUp = evt.touches[0].clientY;
+
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+            if (xDiff > 0) {
+                debounce(function () {
+                    onSwipeLeft(evt);
+                }, 500)()
+            } else {
+                debounce(function () {
+                    onSwipeRight(evt)
+                }, 500)()
+            }
+        } else {
+            if (yDiff > 0) {
+                // debounce(function () {
+                // onSwipeUp(evt)
+                // }, 500)()
+            } else {
+                // debounce(function () {
+                // onSwipeDown(evt)
+                // }, 500)()
+                /* down swipe */
+            }
+        }
+        /* reset values */
+        xDown = null;
+        yDown = null;
+    }
+
+    //*** Speech recognition (removed because of lack of support)
+    // let SpeechRecognition = webkitSpeechRecognition;
+    // var grammar = '#JSGF V1.0; grammar animals; public <animaux> = poule | chien | cot cot;'
+    // var recognition = new SpeechRecognition();
+    // var speechRecognitionList = new webkitSpeechGrammarList();
+    // speechRecognitionList.addFromString(grammar, 1);
+    // recognition.grammars = speechRecognitionList;
+    // recognition.continuous = false;
+    // recognition.lang = 'fr-FR';
+    // recognition.interimResults = false;
+    // recognition.maxAlternatives = 1;
+    //
+    // document.body.onclick = function () {
+    //     recognition.start();
+    //     container.classList.add('listening')
+    //     console.log('Ready to receive a color command.');
+    // }
+    // recognition.onresult = function (event) {
+    //     var result = event.results[0][0].transcript;
+    //     container.classList.remove('listening')
+    //     console.log('Recognition result : '+result);
+    //     for (let index in icons) {
+    //         let icon = icons[index];
+    //         if (!Object.prototype.hasOwnProperty.call(icon, 'grammar')) {
+    //             icon.grammar = []
+    //         }
+    //         icon.grammar.push(icon.name.toLowerCase());
+    //         console.log(icon.grammar);
+    //         for(grammar of icon.grammar){
+    //             if(result.split(' ').includes(grammar)){
+    //                 displayArnimal(index);
+    //                 return;
+    //             }
+    //         }
+    //     }
+    // }
+</script>
+
+</body>
+</html>

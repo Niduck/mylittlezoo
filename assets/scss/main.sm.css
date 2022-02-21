@@ -1,0 +1,46 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 1  | / @include breakpoint('under', 'md'){
+ * 2  | |   header{
+ * 3  | |     &:after{
+ * 4  | |       content: " ";
+ * 5  | |       position: absolute;
+ * 6  | |       top: 105px !important;
+ * 7  | |       height: 50px !important;
+ * 8  | |       left: 0;
+ * 9  | |       width: 100%;
+ * 10 | |       background-image: url('/assets/images/interface/header-mobile.svg') !important;
+ * 11 | |       background-size: cover;
+ * 12 | |     }
+ * 13 | |   }
+ * 14 | |   main{
+ * 15 | |     height: calc(100% - 105px);
+ * 16 | |     flex-direction: column-reverse;
+ * 17 | |     justify-content: center;
+ * 18 | |     align-items: center;
+ * 19 | |     text-align: center;
+ * 20 | |     .left,.right{
+ * 21 | |       width: 100% !important;
+ * 22 | |     }
+ * 23 | |     #animal-image{
+ * 24 | |         height: 50vh !important;
+ * 25 | |         width: auto;
+ * 26 | |     }
+ * 27 | |     #animal-facts{
+ * 28 | |       display: none;
+ * 29 | |     }
+ * 30 | |   }
+ * 31 | \ }
+ *    '
+ *   main.sm.scss 1:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 1  \2502  \250c  @include breakpoint('under', 'md'){\a 2  \2502  \2502    header{\a 3  \2502  \2502      &:after{\a 4  \2502  \2502        content: \" \";\a 5  \2502  \2502        position: absolute;\a 6  \2502  \2502        top: 105px !important;\a 7  \2502  \2502        height: 50px !important;\a 8  \2502  \2502        left: 0;\a 9  \2502  \2502        width: 100%;\a 10 \2502  \2502        background-image: url('/assets/images/interface/header-mobile.svg') !important;\a 11 \2502  \2502        background-size: cover;\a 12 \2502  \2502      }\a 13 \2502  \2502    }\a 14 \2502  \2502    main{\a 15 \2502  \2502      height: calc(100% - 105px);\a 16 \2502  \2502      flex-direction: column-reverse;\a 17 \2502  \2502      justify-content: center;\a 18 \2502  \2502      align-items: center;\a 19 \2502  \2502      text-align: center;\a 20 \2502  \2502      .left,.right{\a 21 \2502  \2502        width: 100% !important;\a 22 \2502  \2502      }\a 23 \2502  \2502      #animal-image{\a 24 \2502  \2502          height: 50vh !important;\a 25 \2502  \2502          width: auto;\a 26 \2502  \2502      }\a 27 \2502  \2502      #animal-facts{\a 28 \2502  \2502        display: none;\a 29 \2502  \2502      }\a 30 \2502  \2502    }\a 31 \2502  \2514  }\a    \2575 \a   main.sm.scss 1:1  root stylesheet";
+}
