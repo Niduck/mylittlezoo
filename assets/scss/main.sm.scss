@@ -1,4 +1,7 @@
 @include breakpoint('under', 'md'){
+  body{
+    font-size: 3rem !important;
+  }
   header{
     &:after{
       content: " ";
@@ -20,8 +23,12 @@
     .left,.right{
       width: 100% !important;
     }
+    #animal-title{
+      //font-size: ;
+    }
     #animal-image{
         height: 50vh !important;
+        max-width: 90vw !important;
         width: auto;
     }
     #animal-facts{

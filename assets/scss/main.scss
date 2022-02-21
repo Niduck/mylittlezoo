@@ -5,6 +5,7 @@ html, body{
   font-family: 'Sacramento', cursive;
   height: 100vh;
   width: 100vw;
+  font-size: 2em;
   margin: 0;
   overflow: hidden;
   transition: background-color linear 300ms;
@@ -56,12 +57,13 @@ main{
     justify-content: center;
     align-items: center;
     #animal-title{
-      font-size: 94px;
+      font-size: 150%;
     }
     #animal-description{
       //font-size: 94px;
-      font-size: 32px;
+      font-size: 50%;
       font-family: "Nunito";
+      text-align: center;
       i{
         font-weight: 600;
         color: var(--accent-color);

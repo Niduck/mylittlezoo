@@ -1,4 +1,8 @@
 @media screen and (max-width: 64rem) {
+  body {
+    font-size: 3rem !important;
+  }
+
   header:after {
     content: " ";
     position: absolute;
@@ -22,6 +26,7 @@
   }
   main #animal-image {
     height: 50vh !important;
+    max-width: 90vw !important;
     width: auto;
   }
   main #animal-facts {
@@ -32,6 +37,7 @@ html, body {
   font-family: "Sacramento", cursive;
   height: 100vh;
   width: 100vw;
+  font-size: 2em;
   margin: 0;
   overflow: hidden;
   transition: background-color linear 300ms;
@@ -83,11 +89,12 @@ main .left {
   align-items: center;
 }
 main .left #animal-title {
-  font-size: 94px;
+  font-size: 150%;
 }
 main .left #animal-description {
-  font-size: 32px;
+  font-size: 50%;
   font-family: "Nunito";
+  text-align: center;
 }
 main .left #animal-description i {
   font-weight: 600;
