@@ -80,7 +80,7 @@ main {
   width: calc(100vw - 10%);
   padding: 0 5%;
   display: flex;
-  --transition-duration: 350ms;
+  --transition-duration: 200ms;
   -webkit-transition: opacity var(--transition-duration) ease-in-out;
   -moz-transition: opacity var(--transition-duration) ease-in-out;
   -o-transition: opacity var(--transition-duration) s ease-in-out;
