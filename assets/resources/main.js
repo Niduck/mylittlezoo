@@ -26,7 +26,7 @@ function render (_index) {
         desc.innerHTML = zoo[_index].description
         for(let fact of zoo[_index].facts){
             let p = document.createElement("p")
-            p.append(fact)
+            p.innerHTML = fact
             facts.append(p);
         }
         let sel = document.querySelectorAll('[data-sound]');

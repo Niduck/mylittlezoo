@@ -37,6 +37,53 @@
             }
         },
         {
+            name: 'Vache',
+            path: [images, 'cow.svg'].join('/'),
+            title: "La vache",
+            description: `Elle <i data-sound="meugle">meugle</i>, beugle, ou migit.`,
+            facts: [],
+            sounds: {
+                'meugle': [sounds, 'cow.mp3'].join('/'),
+            },
+            colors: {
+                'background': '#FDF0EF',
+                'text': '#E88894',
+                'accent': '#E88894'
+            }
+        },
+        {
+            name: 'Mouton',
+            path: [images, 'sheep.svg'].join('/'),
+            title: "Le mouton",
+            description: `Il <i data-sound="bele">bêle</i>.`,
+            facts: [
+                "Les moutons sont reconnus pour pratiquer l'automédication lorsqu’ils sont malades. Ils mangent des plantes en fonction de leurs maux."
+            ],
+            sounds: {
+                'bele': [sounds, 'sheep.mp3'].join('/'),
+            },
+            colors: {
+                'background': '#FEF4EF',
+                'text': '#df5f6f',
+                'accent': '#df5f6f'
+            }
+        },
+        {
+            name: 'Poule',
+            path: [images, 'chicken.svg'].join('/'),
+            title: "La poule",
+            description: `Elle <i data-sound="caquette">caquette</i> <small>(quand elle pond)</small>, crételle <small>(après la ponte)</small> ou glousse lorsqu'elle veut couver ou appelle ses poussins.`,
+            facts: [],
+            sounds: {
+                'caquette': [sounds, 'chicken.mp3'].join('/'),
+            },
+            colors: {
+                'background': '#F7EBE8',
+                'text': '#DA6666',
+                'accent': '#DA6666'
+            }
+        },
+        {
             name: 'Chat',
             path: [images, 'cat.svg'].join('/'),
             title: "Le chat",
@@ -52,7 +99,7 @@
             }
         },
         {
-            name: 'Clien',
+            name: 'Chien',
             path: [images, 'dog.svg'].join('/'),
             title: "Le chien",
             description: `Il <i data-sound="dog">aboie</i> pour avertir du danger. <br/> Il grogne lorsqu'il a peur ou qu'il n'est pas content.`,
@@ -82,6 +129,41 @@
                 'background': '#FFF0DF',
                 'text': '#DB7943',
                 'accent': '#DB7943'
+            }
+        },
+        {
+            name: 'Gorille',
+            path: [images, 'gorilla.svg'].join('/'),
+            title: "Le gorille",
+            description: `Il <i data-sound="cri">cri</i> ou hurle.`,
+            facts: [
+                "Chaque soir, les gorilles se construisent un nid pour y dormir, en utilisant la végétation",
+                "Ils utilisent des branches pour le bord du nid et mettent des feuilles au centre pour dormir confortablement.",
+            ],
+            sounds: {
+                'cri': [sounds, 'gorilla.mp3'].join('/'),
+            },
+            colors: {
+                'background': '#FAFAFA',
+                'text': '#474747',
+                'accent': '#474747'
+            }
+        },
+        {
+            name: 'Elephant',
+            path: [images, 'elephant.svg'].join('/'),
+            title: "L'éléphant",
+            description: `Il <i data-sound="barrit">barrit</i>, barète <small>(lorsqu'il est contrarié)</small> ou barronne.`,
+            facts: [
+                "Le lobe temporal de l'éléphant est plus grand et plus dense que celui des humains - d'où le dicton <q> <i>les éléphants n'oublient jamais</i> </q>.",
+            ],
+            sounds: {
+                'barrit': [sounds, 'elephant.mp3'].join('/'),
+            },
+            colors: {
+                'background': '#F6FDFF',
+                'text': '#5CB4C8',
+                'accent': '#5CB4C8'
             }
         },
 
