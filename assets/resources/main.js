@@ -147,3 +147,16 @@ function handleTouchMove (evt) {
     xDown = null;
     yDown = null;
 }
+
+
+//Display modal
+let ft = localStorage.getItem('mlz:tutorial');
+if(Boolean(ft) !== true){
+    console.log('passe');
+    let modal = document.getElementById("mlz-tutorial");
+    modal.style.display = 'block';
+    document.getElementById("mlz-tutorial-next").addEventListener('click', function(){
+        modal.style.display = "none";
+        localStorage.setItem('mlz:tutorial', 'true')
+    })
+}

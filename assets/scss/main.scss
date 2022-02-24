@@ -41,6 +41,87 @@ header{
     font-size: 90%;
   }
 }
+#mlz-tutorial{
+  display: none;
+  .modal-back{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: .5;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .modal-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal{
+    background: rgba(255,255,255,.9);
+    width: 90vw;
+    padding: 20px;
+    max-width: 640px;
+    height: calc(90vh - 20px);
+    border-radius: 20px;
+    position: absolute;
+    left: calc(50% - 320px);
+    top: calc(5vh - 10px);
+    .modal-head{
+      width: 100%;
+      text-align: center;
+      font-size: 2.15rem;
+    }
+    .modal-body{
+      padding: 20px;
+      flex: 1;
+      .help-block{
+        display: flex;
+        border: 2px dashed;
+        border-radius: 10px;
+        padding: 20px;
+        align-items: center;
+        grid-gap: 20px;
+        &.inverse{
+          flex-direction: row-reverse;
+        }
+        &.column{
+          flex-direction: column;
+        }
+        .hp-left{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .r-180{
+            transform: rotate(180deg);
+          }
+          img{
+            margin: 0 1rem;
+          }
+        }
+        .hp-right{
+          font-family: 'Nunito';
+          font-size: 24px;
+        
+        }
+      }
+    }
+    .modal-footer{
+      flex: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.25rem;
+      a{
+        cursor:pointer;
+      }
+    }
+  }
+}
+.my-4{
+  margin: 1rem 0;
+}
 main{
   height: calc(100vh - 280px);
   width: calc(100vw - 10%);
@@ -60,6 +141,7 @@ main{
     align-items: center;
     #animal-title{
       font-size: 150%;
+      color: var(--accent-color);
     }
     #animal-description{
       //font-size: 94px;

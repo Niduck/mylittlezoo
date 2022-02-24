@@ -39,4 +39,41 @@
       display: none;
     }
   }
+  
+  #mlz-tutorial{
+    .modal-back{
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: .5;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .modal{
+      width: calc(90% - 20px) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      left: calc(5% - 10px) !important;
+      top: calc(5vh - 10px);
+      .modal-head{
+        font-size: 1.5rem !important;
+      }
+      .modal-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+        .help-block{
+          .hp-right{
+            font-size: 16px !important;
+            
+          }
+        }
+      }
+    }
+  }
 }

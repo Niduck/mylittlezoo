@@ -135,13 +135,14 @@
             name: 'Gorille',
             path: [images, 'gorilla.svg'].join('/'),
             title: "Le gorille",
-            description: `Il <i data-sound="cri">cri</i> ou hurle.`,
+            description: `Il <i data-sound="cri">cri</i> ou <i data-sound="hurle">hurle</i>.`,
             facts: [
                 "Chaque soir, les gorilles se construisent un nid pour y dormir, en utilisant la végétation",
                 "Ils utilisent des branches pour le bord du nid et mettent des feuilles au centre pour dormir confortablement.",
             ],
             sounds: {
                 'cri': [sounds, 'gorilla.mp3'].join('/'),
+                'hurle': [sounds, 'gorilla-2.mp3'].join('/'),
             },
             colors: {
                 'background': '#FAFAFA',
@@ -164,6 +165,35 @@
                 'background': '#F6FDFF',
                 'text': '#5CB4C8',
                 'accent': '#5CB4C8'
+            }
+        },
+        {
+            name: 'Tortue',
+            path: [images, 'turtle.svg'].join('/'),
+            title: "La tortue",
+            description: "Il n'existe pas de nom spécifique pour le \"cri\" de la tortue, car il ne s'agit pas d'un cri mais plutôt d'un sifflement ou d'une stridulation (comme les insectes de type criquet).",
+            facts: [],
+            sounds: {},
+            colors: {
+                'background': '#F3F8EE',
+                'text': '#4B672E',
+                'accent': '#4B672E'
+            }
+        },
+        {
+            name: 'Escargot',
+            path: [images, 'snail.svg'].join('/'),
+            title: "L'escargot",
+
+            description: "Certaines espèces produisent des cris plaintifs lorsqu'ils sont attrapés.",
+            facts: [
+                "En captivité, des Planorbis corneus, émettent une note aiguë, analogue au son produit par une flûte, à chaque nourrissement quotidien."
+            ],
+            sounds: {},
+            colors: {
+                'background': '#F8F1EE',
+                'text': '#A1726E',
+                'accent': '#A1726E'
             }
         },
 

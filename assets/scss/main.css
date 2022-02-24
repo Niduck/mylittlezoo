@@ -37,6 +37,38 @@
   main #animal-facts {
     display: none;
   }
+
+  #mlz-tutorial .modal-back {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #mlz-tutorial .modal {
+    width: calc(90% - 20px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: calc(5% - 10px) !important;
+    top: calc(5vh - 10px);
+  }
+  #mlz-tutorial .modal .modal-head {
+    font-size: 1.5rem !important;
+  }
+  #mlz-tutorial .modal .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+  }
+  #mlz-tutorial .modal .modal-body .help-block .hp-right {
+    font-size: 16px !important;
+  }
 }
 html, body {
   font-family: "Sacramento", cursive;
@@ -75,6 +107,88 @@ header .title {
   font-size: 90%;
 }
 
+#mlz-tutorial {
+  display: none;
+}
+#mlz-tutorial .modal-back {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#mlz-tutorial .modal-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#mlz-tutorial .modal {
+  background: rgba(255, 255, 255, 0.9);
+  width: 90vw;
+  padding: 20px;
+  max-width: 640px;
+  height: calc(90vh - 20px);
+  border-radius: 20px;
+  position: absolute;
+  left: calc(50% - 320px);
+  top: calc(5vh - 10px);
+}
+#mlz-tutorial .modal .modal-head {
+  width: 100%;
+  text-align: center;
+  font-size: 2.15rem;
+}
+#mlz-tutorial .modal .modal-body {
+  padding: 20px;
+  flex: 1;
+}
+#mlz-tutorial .modal .modal-body .help-block {
+  display: flex;
+  border: 2px dashed;
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+  grid-gap: 20px;
+}
+#mlz-tutorial .modal .modal-body .help-block.inverse {
+  flex-direction: row-reverse;
+}
+#mlz-tutorial .modal .modal-body .help-block.column {
+  flex-direction: column;
+}
+#mlz-tutorial .modal .modal-body .help-block .hp-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mlz-tutorial .modal .modal-body .help-block .hp-left .r-180 {
+  transform: rotate(180deg);
+}
+#mlz-tutorial .modal .modal-body .help-block .hp-left img {
+  margin: 0 1rem;
+}
+#mlz-tutorial .modal .modal-body .help-block .hp-right {
+  font-family: "Nunito";
+  font-size: 24px;
+}
+#mlz-tutorial .modal .modal-footer {
+  flex: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+#mlz-tutorial .modal .modal-footer a {
+  cursor: pointer;
+}
+
+.my-4 {
+  margin: 1rem 0;
+}
+
 main {
   height: calc(100vh - 280px);
   width: calc(100vw - 10%);
@@ -96,6 +210,7 @@ main .left {
 }
 main .left #animal-title {
   font-size: 150%;
+  color: var(--accent-color);
 }
 main .left #animal-description {
   font-size: 50%;
