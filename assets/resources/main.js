@@ -120,6 +120,7 @@ function handleTouchMove (evt) {
 
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
+    console.log(xDown, xUp, xDiff);
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
         if (xDiff > 0) {

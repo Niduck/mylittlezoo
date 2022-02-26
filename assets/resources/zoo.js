@@ -162,9 +162,9 @@
                 'barrit': [sounds, 'elephant.mp3'].join('/'),
             },
             colors: {
-                'background': '#F6FDFF',
-                'text': '#5CB4C8',
-                'accent': '#5CB4C8'
+                'background': '#F4F4F4',
+                'text': '#898989',
+                'accent': '#898989'
             }
         },
         {
@@ -194,6 +194,22 @@
                 'background': '#F8F1EE',
                 'text': '#A1726E',
                 'accent': '#A1726E'
+            }
+        },
+        {
+            name: 'Grenouille',
+            path: [images, 'frog.svg'].join('/'),
+            title: "La grenouille",
+
+            description: "Elle coasse",
+            facts: [
+                "Championnes du saut, les grenouilles peuvent faire des bonds de plus de 20 fois leur propre taille, grâce à leurs puissantes pattes postérieures."
+            ],
+            sounds: {},
+            colors: {
+                'background': '#EFF5E8',
+                'text': '#86A368',
+                'accent': '#86A368'
             }
         },
 
