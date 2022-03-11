@@ -1,6 +1,11 @@
 
 - [ ] Mise en cache des images et des sons + serviceWorker
 - [ ] Ajouter le pays de l'animal, son poids sa taille
-- [ ] distance touch (https://gist.github.com/inferusvv/80bbe5308511f4d6eef939f89185205c)
+- [x] distance touch (https://gist.github.com/inferusvv/80bbe5308511f4d6eef939f89185205c)
+- [x] https://pqina.nl/blog/blocking-navigation-gestures-on-ios-13-4/
 - [ ] Affichage même sur PC des infos de l'application 
 - [ ] Notification de nouvel animal
+- [ ] Affichage different en fonction de l'age ?
+- [ ] Mode devinette (blind test) (fun fact, ensuite le cri)
+- [ ] Chromecast mode devinette
+- [ ] Mode aléatoire

@@ -212,6 +212,34 @@
                 'accent': '#86A368'
             }
         },
+        {
+            name: 'Ecureuil',
+            path: [images, 'squirrel.svg'].join('/'),
+            title: "L'ecureuil",
+
+            description: "Il grogne, siffle et crie.",
+            facts: [],
+            sounds: {},
+            colors: {
+                'background': '#faeee8',
+                'text': '#ab5e37',
+                'accent': '#ab5e37'
+            }
+        },
+        {
+            name: 'Hérisson',
+            path: [images, 'hedgehog.svg'].join('/'),
+            title: "Le hérisson",
+
+            description: "Il grogne, siffle et crie.",
+            facts: [],
+            sounds: {},
+            colors: {
+                'background': '#FEF7F4',
+                'text': '#A1726E',
+                'accent': '#A1726E'
+            }
+        },
 
     ]
 })()
