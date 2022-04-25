@@ -124,11 +124,11 @@ function swipedetect(el, callback){
         startX = touchobj.pageX
         startY = touchobj.pageY
         startTime = new Date().getTime() // record time when finger first makes contact with surface
-        e.preventDefault()
+        // e.preventDefault()
     }, {passive: false})
 
     touchsurface.addEventListener('touchmove', function(e){
-        e.preventDefault() // prevent scrolling when inside DIV
+        // e.preventDefault() // prevent scrolling when inside DIV
     },{passive: false})
 
     touchsurface.addEventListener('touchend', function(e){
@@ -144,16 +144,32 @@ function swipedetect(el, callback){
                 swipedir = (distY < 0)? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
             }
         }
-        handleswipe(swipedir)
-        e.preventDefault()
+        handleswipe(e, swipedir)
+        // e.preventDefault()
     },{passive: false})
 }
-swipedetect(document.body, function(swipedir){
+swipedetect(document.body, function(e, swipedir){
     switch(swipedir){
+        case 'down': {
+            // let menu = document.getElementById('mlz-menu');
+            // menu.classList.add('visible');
+            e.preventDefault()
+        }
+            break;
+        case 'up': {
+            e.preventDefault()
+            // let menu = document.getElementById('mlz-menu');
+            // if( menu.classList.contains('visible')){
+            //     menu.classList.remove('visible');
+            // }
+        }
+            break;
         case 'left':
+            e.preventDefault()
             onSwipeLeft();
             break;
         case 'right':
+            e.preventDefault()
             onSwipeRight();
             break;
     }
